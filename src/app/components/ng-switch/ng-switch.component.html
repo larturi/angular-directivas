@@ -1,0 +1,37 @@
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+    <div *ngSwitchCase="'secondary'" class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+    <div *ngSwitchCase="'danger'" class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div *ngSwitchCase="'dark'" class="alert alert-dark" role="alert">
+        A simple dark alert—check it out!
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+
+        <button type="button" class="btn btn-primary" (click)="alerta='primary'">primary</button>
+        <button type="button" class="btn btn-secondary" (click)="alerta='secondary'">secondary</button>
+        <button type="button" class="btn btn-success" (click)="alerta='success'">success</button>
+        <button type="button" class="btn btn-danger" (click)="alerta='danger'">danger</button>
+        <button type="button" class="btn btn-warning" (click)="alerta='warning'">warning</button>
+        <button type="button" class="btn btn-info" (click)="alerta='info'">info</button>
+        <button type="button" class="btn btn-dark" (click)="alerta='dark'">dark</button>
+
+    </div>
+</div>

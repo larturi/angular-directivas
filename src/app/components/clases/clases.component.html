@@ -1,0 +1,38 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quam delectus vero ipsum laborum recusandae esse voluptatem possimus ab, ad a neque placeat ea harum ducimus velit quod quibusdam voluptas.
+</div>
+
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-outline-primary" (click)="alerta = 'alert-primary'">alert-primary</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="alerta = 'alert-secondary'">alert-secondary</button>
+        <button type="button" class="btn btn-outline-success" (click)="alerta = 'alert-success'">alert-success</button>
+        <button type="button" class="btn btn-outline-danger" (click)="alerta = 'alert-danger'">alert-danger</button>
+        <button type="button" class="btn btn-outline-warning" (click)="alerta = 'alert-warning'">alert-warning</button>
+        <button type="button" class="btn btn-outline-info" (click)="alerta = 'alert-info'">alert-info</button>
+        <button type="button" class="btn btn-outline-dark" (click)="alerta = 'alert-dark'">alert-dark</button>
+    </div>
+</div>
+
+<hr>
+
+<h3 [ngClass]="{'text-danger': propiedades.danger, 
+                'text-info'  : !propiedades.danger}">
+    Hola mundo
+</h3>
+
+<hr>
+
+<button type="button" class="btn btn-outline-dark" (click)="propiedades.danger = !propiedades.danger">
+    Cambiar
+</button>
+
+<hr>
+
+<h3>Proceso asincrono</h3>
+
+<button (click)="ejecutar()" type="button" class="btn btn-primary" [disabled]="loading">
+    <i [ngClass]="{ 'fa-save':!loading, 'fa-refresh fa-spin':loading }" class="fa"></i>
+    <span *ngIf="!loading"> Guardar cambios</span>
+    <span *ngIf="loading"> Espere por favor</span>
+</button>
